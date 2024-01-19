@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import TicketTypeRequest from '../../src/pairtest/lib/TicketTypeRequest';
 
 describe('TicketTypeRequest', () => {

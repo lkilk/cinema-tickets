@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1705661453364" clover="3.2.0">
-  <project timestamp="1705661453364" name="All files">
-    <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="16" coveredelements="16" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
-    <file name="TicketTypeRequest.js" path="/Users/liam.kilkenny/Development/cinema-tickets/cinema-tickets-javascript/src/pairtest/lib/TicketTypeRequest.js">
+<coverage generated="1705688819446" clover="3.2.0">
+  <project timestamp="1705688819446" name="All files">
+    <metrics statements="51" coveredstatements="51" conditionals="30" coveredconditionals="30" methods="7" coveredmethods="7" elements="88" coveredelements="88" complexity="0" loc="51" ncloc="51" packages="2" files="3" classes="3"/>
+    <package name="pairtest">
+      <metrics statements="42" coveredstatements="42" conditionals="26" coveredconditionals="26" methods="4" coveredmethods="4"/>
+      <file name="TicketService.js" path="/Users/liam.kilkenny/Development/cinema-tickets/cinema-tickets-javascript/src/pairtest/TicketService.js">
+        <metrics statements="42" coveredstatements="42" conditionals="26" coveredconditionals="26" methods="4" coveredmethods="4"/>
+        <line num="12" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="36" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
+        <line num="43" count="7" type="stmt"/>
+        <line num="45" count="7" type="stmt"/>
+        <line num="46" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="49" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="7" type="stmt"/>
+        <line num="57" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="66" count="5" type="stmt"/>
+        <line num="67" count="5" type="stmt"/>
+        <line num="68" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="70" count="3" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="83" count="3" type="stmt"/>
+        <line num="84" count="3" type="stmt"/>
+        <line num="89" count="3" type="stmt"/>
+        <line num="90" count="3" type="stmt"/>
+        <line num="92" count="3" type="stmt"/>
+        <line num="93" count="6" type="stmt"/>
+        <line num="94" count="6" type="stmt"/>
+        <line num="96" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="97" count="2" type="stmt"/>
+        <line num="101" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="102" count="2" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="111" count="1" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pairtest.lib">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="18" count="2" type="stmt"/>
-      <line num="21" count="2" type="stmt"/>
-      <line num="22" count="2" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
-      <line num="30" count="1" type="stmt"/>
-      <line num="33" count="6" type="stmt"/>
-    </file>
+      <file name="InvalidPurchaseException.js" path="/Users/liam.kilkenny/Development/cinema-tickets/cinema-tickets-javascript/src/pairtest/lib/InvalidPurchaseException.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="TicketTypeRequest.js" path="/Users/liam.kilkenny/Development/cinema-tickets/cinema-tickets-javascript/src/pairtest/lib/TicketTypeRequest.js">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
