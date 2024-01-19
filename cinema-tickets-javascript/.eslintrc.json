@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "plugins": ["prettier"],
+  "extends": ["@dwp/eslint-config-base", "prettier"],
+  "rules": {
+    "no-console": 1,
+    "prettier/prettier": 2,
+    "semi": ["error", "always", { "omitLastInOneLineBlock": false }],
+    "curly": ["error", "all"],
+    "valid-jsdoc": "error",
+    "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
+    "no-unused-vars": "warn"
+  }
+}
