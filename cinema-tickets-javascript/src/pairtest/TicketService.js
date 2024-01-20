@@ -7,6 +7,16 @@ export default class TicketService {
   /**
    * Should only have private methods other than the one below.
    */
+  #paymentService;
+  #reservationService;
+
+  constructor(
+    paymentService = new TicketPaymentService(),
+    reservationService = new SeatReservationService(),
+  ) {
+    this.#paymentService = paymentService;
+    this.#reservationService = reservationService;
+  }
 
   purchaseTickets(accountId, ...ticketTypeRequests) {
     if (!Number.isInteger(accountId) || accountId <= 0) {
@@ -80,8 +90,7 @@ export default class TicketService {
 
   // make payment request
   #makePayment(accountId, amount) {
-    const paymentService = new TicketPaymentService();
-    paymentService.makePayment(accountId, amount);
+    this.#paymentService.makePayment(accountId, amount);
   }
 
   // calculate seat reservation
@@ -108,7 +117,6 @@ export default class TicketService {
 
   // make seat reservation request
   #reserveSeats(accountId, seats) {
-    const reservationService = new SeatReservationService();
-    reservationService.reserveSeat(accountId, seats);
+    this.#reservationService.reserveSeat(accountId, seats);
   }
 }

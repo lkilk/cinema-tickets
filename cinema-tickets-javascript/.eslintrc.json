@@ -1,7 +1,9 @@
 {
+  "env": { "jest": true },
   "root": true,
   "plugins": ["prettier"],
   "extends": ["@dwp/eslint-config-base", "prettier"],
+  "ignorePatterns": [],
   "rules": {
     "no-console": 1,
     "prettier/prettier": 2,

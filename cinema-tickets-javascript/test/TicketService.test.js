@@ -1,9 +1,8 @@
-import { describe, beforeEach, afterEach, expect, it } from '@jest/globals';
 import TicketService from '../src/pairtest/TicketService';
 import TicketTypeRequest from '../src/pairtest/lib/TicketTypeRequest';
 import InvalidPurchaseException from '../src/pairtest/lib/InvalidPurchaseException';
-import SeatReservationService from '../src/thirdparty/seatbooking/SeatReservationService';
 import TicketPaymentService from '../src/thirdparty/paymentgateway/TicketPaymentService';
+import SeatReservationService from '../src/thirdparty/seatbooking/SeatReservationService';
 
 jest.mock('../src/pairtest/lib/TicketTypeRequest', () => {
   return jest.fn().mockImplementation((type, number) => {
@@ -33,7 +32,12 @@ describe('TicketService', () => {
   let infantTicketRequest;
 
   beforeEach(() => {
-    ticketService = new TicketService();
+    const mockPaymentService = new TicketPaymentService();
+    const mockReservationService = new SeatReservationService();
+    ticketService = new TicketService(
+      mockPaymentService,
+      mockReservationService,
+    );
     adultTicketRequest = new TicketTypeRequest('ADULT', 1);
     childTicketRequest = new TicketTypeRequest('CHILD', 2);
     infantTicketRequest = new TicketTypeRequest('INFANT', 1);
@@ -41,6 +45,12 @@ describe('TicketService', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('correctly handles a ticket request', () => {
+    const testTicketRequest = new TicketTypeRequest('ADULT', 4);
+    expect(testTicketRequest.getTicketType()).toBe('ADULT');
+    expect(testTicketRequest.getNoOfTickets()).toBe(4);
   });
 
   it('throws an error if accountID is not a number greater than 0', () => {
@@ -143,6 +153,6 @@ describe('TicketService', () => {
       childTicketRequest,
       infantTicketRequest,
     );
-    expect(mockReserveSeat).toHaveBeenCalledWith(101, 3);
+    expect(mockReserveSeat).toHaveBeenCalledWith(101, requiredSeats);
   });
 });
